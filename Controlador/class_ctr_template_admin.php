@@ -29,7 +29,8 @@ class ControladorPlantilla_Admin{
 
 
         public function reproductor(){
-            require"../template/reproductor.php";
+            //require"../template/reproductor.php";
+            require"../../jPlayer Flat Audio Theme/reproductor.php";
 
         }
 

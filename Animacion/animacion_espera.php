@@ -1,5 +1,5 @@
  <div id="loading-screen" style="width: 100%;  display: none;">
-                    <img src="../Animacion/spinning-circles.svg">
+                    <img src="../Animacion/spinning-circles.svg?v=1">
   </div>
 
   <style>

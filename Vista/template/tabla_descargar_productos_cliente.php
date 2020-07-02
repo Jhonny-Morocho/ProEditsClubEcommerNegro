@@ -15,7 +15,7 @@
                         <h4>Total : <?php echo $value['total'] ?></h4>
                         
 
-                    <table id="example_2" class="table table-hover table-dark"  width="100%">
+                    <table id="example" class="table table-hover table-dark"  width="100%">
                         <thead class="thead-light">
                         <tr>
                             <th>#</th>

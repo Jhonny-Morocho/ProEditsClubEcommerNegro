@@ -26,8 +26,8 @@
                             <div class="newsletter__title">
                                 <!-- logo -->
                                     <div class="brand-logo">
-                                        <a href="../logo_febrero.php">
-                                            <img src="img_dj/LOGO CON COLOR.png" alt="brand logo"  width="50%">
+                                        <a href="../">
+                                            <img src="img_dj/LOGO CON COLOR.png" alt="brand logo" >
                                         </a>
                                     </div>
                            
@@ -75,11 +75,11 @@
       <script src="assets/js/main.js?v=1"></script> 
     <!-- //=======================DATA_TABLE_ ojo borrar estos scrip x q estan de mas============================//
     //=======================DATA_TABLE_============================// -->
-    <!-- <script src="../Controlador/js/data_table/jquery.dataTables.min.js"></script>
+    <script src="../Controlador/js/data_table/jquery.dataTables.min.js"></script>
     <script src="../Controlador/js/data_table/dataTables.responsive.min.js"></script>
 
     <script src="../Controlador/js/data_table/responsive.bootstrap.min.js"></script>
-    <script src="../Controlador/js/data_table/dataTables.bootstrap.min.js"></script> -->
+    <script src="../Controlador/js/data_table/dataTables.bootstrap.min.js"></script> 
 
   <!-- //tablas aux -->
  <!-- Jquery DataTable Plugin Js -->
@@ -91,19 +91,19 @@
 <script src="../Admin/assets/plugins/jquery-datatable/buttons/buttons.html5.min.js"></script>
 <script src="../Admin/assets/plugins/jquery-datatable/buttons/buttons.print.min.js"></script> -->
 
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>  -->
 
-    <script src="../Controlador/js/data_table.js?v=4"></script>
+    <script src="../Controlador/js/data_table.js?v=4.0.17"></script>
 <!-- <script src="../Admin/assets/js/pages/tables/jquery-datatable.js"></script> -->
 
     <!-- //========================Reproductor========================================// -->
 
-    <script src="../Controlador/js/reproducir_play.js?v=1"></script>
+    <script src="../Controlador/js/reproducir_play.js?v=2"></script>
 
 
         <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
@@ -117,6 +117,7 @@
 
     <!-- //===========================Alert=====================================// -->
     <script src="../Alert/sweetalert2.all.min.js"></script>
+  
 
     <!-- //===========================carrito=====================================// -->
     <script src="../Controlador/js/carrito_compras.js?v=1"></script>
@@ -156,9 +157,12 @@
 
 
 
-<!-- =========================REPRODUCTOR DE AUDIO MINIMAL=================== -->
-<link rel="stylesheet" href="../ReproducotrMinimal/src/jQuery.AudioPlayer.css">
-<script type="text/javascript" src="../ReproducotrMinimal/src/jQuery.AudioPlayer.js?v=1"></script>
+<!-- =============================REPRODUCTOR DE AUDIO=============================== -->
+<link rel="stylesheet" type="text/css" href="../jPlayer Flat Audio Theme/css/jplayer-flat-audio-theme.css" />
+<script type="text/javascript" src="../jPlayer Flat Audio Theme/js/jquery.jplayer.min.js"></script> 
+
+
+
 
 
 

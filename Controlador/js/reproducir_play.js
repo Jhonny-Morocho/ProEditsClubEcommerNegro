@@ -58,15 +58,6 @@ $('.reproducir_play').on('click',function(e){
     e.preventDefault();
 
 
- var player = $.AudioPlayer;
-    player.init({
-        container: '#audioWrap'
-        ,source: ''
-        ,imagePath: '../ReproducotrMinimal/src/image'
-        ,debuggers: true
-        ,allowSeek: true
-    });
-
     //$(".cargandoCancion").remove();
     var url_destino=$(this).attr('url_destino');
     var titulo=$(this).attr('nombre_cancion');
@@ -87,14 +78,23 @@ $('.reproducir_play').on('click',function(e){
         success:function(data){
             console.log(data);
             animacion();
-
-            //(this).fadeIn(1000).html(data);
-            //$(".cargandoCancion").remove();
-            //(this).remove('.loading');//eliminar el icno de espera sie xite uno
-            player.updateSource({
-                source: url_destino
-            });
-
+            
+            //reproductor
+            jQuery("#jquery_jplayer_1").jPlayer({
+                swfPath: "http://www.jplayer.org/latest/js/Jplayer.swf",
+                supplied: "mp3",
+                wmode: "window",
+                preload:"auto",
+                autoPlay: true,
+                errorAlerts:false,
+                warningAlerts:false
+              });
+           
+            jQuery("#jquery_jplayer_1").jPlayer("setMedia", {
+                mp3:url_destino
+              });
+        
+            jQuery("#jquery_jplayer_1").jPlayer("play");
             
         }
     });

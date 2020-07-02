@@ -256,7 +256,10 @@
 			$id_cliente=$_SESSION['id_cliente'];
 			//=============VERIFICAR SI TIENE SALDO==============/
 			$total_cancelar_ajax=$_POST['total_cancelar'];//
+
+			//=============AHORA EL CLIENTE PUEDE COMPAR LA MEMBRESIA SIN LIMITE DE TIEMPO X ESO COMENTE ESTA LNEA
 			$respuesta_membresia=CtrMembresia::ctr_controlar_compra_membresia($id_cliente);
+			//=============AHORA EL CLIENTE PUEDE COMPAR LA MEMBRESIA SIN LIMITE DE TIEMPO X ESO COMENTE ESTA LNEA
 			
 			//obtengo los datos desde el post y los guardo en la variablbes
 
@@ -276,23 +279,42 @@
 			$precio_final=explode(",", $datos["precio"]);//para separar remplazo la comas por guione y hago una cadena
 			$precio_cancion_final=str_replace(",","-", $datos["precio"]);
 
-			switch ($respuesta_membresia['respuesta']) {//verificar si la membresia esta activada o no activa
-				case "true"://la membresia activa 
 
+			//=============AHORA EL CLIENTE PUEDE COMPAR LA MEMBRESIA SIN LIMITE DE TIEMPO X ESO COMENTE ESTA LNEA
+		// 	switch ($respuesta_membresia['respuesta']) {//verificar si la membresia esta activada o no activa
+		// 		case "true"://la membresia activa 
+
+		// 	$array_membresia=array('tipo_respuesta'=>'membresia',
+		// 							'estado_membresia'=>'activa',
+		// 							'id_membresia'=>$respuesta_membresia['id_membresia'],
+		// 							'rango_descarga'=>$respuesta_membresia['rango_descarga'],
+		// 'url_pago_finalizado_membresia'=>'../Pay_Pal/pago_finalizado_membresia.php?exito=true&metodo_pago=Membresia&productos_id='.$id_final.'&productos_precio='.$precio_cancion_final.'&rango_actual_descarga='.$respuesta_membresia['rango_descarga'].'&total_cancelar='.$total_cancelar_ajax.'&id_membresia='.$respuesta_membresia['id_membresia'] );
+		// 			break;
+		// 		case "false"://membresiica caducada
+		// 		$array_membresia=array('estado_membresia'=>'no_activa','tipo_respuesta'=>'membresia');//no cuenta con membresia activa
+		// 			break;
+
+
+		// 	}
+			//=============AHORA EL CLIENTE PUEDE COMPAR LA MEMBRESIA SIN LIMITE DE TIEMPO X ESO COMENTE ESTA LNEA
+	
+			//=============NEUVO LINEA DE CODIFO Q REMPLAZA LA ANTERIOR==============================//
+
+			//print_r($respuesta_membresia);
+		
+			//echo"soy paypal contrroladore";
 			$array_membresia=array('tipo_respuesta'=>'membresia',
 									'estado_membresia'=>'activa',
 									'id_membresia'=>$respuesta_membresia['id_membresia'],
 									'rango_descarga'=>$respuesta_membresia['rango_descarga'],
 		'url_pago_finalizado_membresia'=>'../Pay_Pal/pago_finalizado_membresia.php?exito=true&metodo_pago=Membresia&productos_id='.$id_final.'&productos_precio='.$precio_cancion_final.'&rango_actual_descarga='.$respuesta_membresia['rango_descarga'].'&total_cancelar='.$total_cancelar_ajax.'&id_membresia='.$respuesta_membresia['id_membresia'] );
-					break;
-				case "false"://membresiica caducada
-				$array_membresia=array('estado_membresia'=>'no_activa','tipo_respuesta'=>'membresia');//no cuenta con membresia activa
-					break;
-			}
 
+
+			
 
 		}//fin if opcion pago recarga
-		
+
+		//=============NEUVO LINEA DE CODIFO Q REMPLAZA LA ANTERIOR=====================
 		die(json_encode($array_membresia));
 	}// end de la funcion
 

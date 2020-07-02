@@ -104,12 +104,14 @@
               $id_Cliente=$_GET['id_cliente'];
               $total_cancelar=$total_paypal;
 
+
               switch ($bandera_mebresia) {
                   case true:
                       echo "compro_membresia";
                       $metodo="PayPal";
                       $respuesta_membresia=CtrMembresia::ctr_agregar_membresia($tipo_membresia,$id_Cliente,$total_cancelar,$metodo);
                       print_r($respuesta_membresia);
+                  
                       header("Location:../admin_cliente.php");//
                       break;
                   case false:
@@ -141,6 +143,7 @@
                   }//fin del while
                           echo"exito ";
                              //============BORRO LA CESTA=================//
+                    
                     echo '<script>
                             localStorage.removeItem("listaProductos");
                             localStorage.removeItem("cantidadCesta");

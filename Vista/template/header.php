@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="../Tabla_Membresia/style.css?v=1">
 
     <!-- //============EFECTO CARGANDO=================== -->
-    <link rel="stylesheet" href="../Fx Cargando/css/styles.css?v=2">
+    <link rel="stylesheet" href="../Fx Cargando/css/styles.css?v=2.1">
 
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
 
@@ -70,49 +70,16 @@
     
     <link href="https://cdn.datatables.net/rowreorder/1.2.5/css/rowReorder.dataTables.min.css"> -->
        <!-- //==========================ANIMACION DE CARGANDO LA PAGINA===================// -->
-       <script src="https://cdn.jsdelivr.net/jquery.queryloader2/3.2.2/jquery.queryloader2.min.js"></script>
-    <script>
-     window.addEventListener('DOMContentLoaded', function() {
-         new QueryLoader2(document.querySelector("body"), {
-             barColor: "#efefef",
-             backgroundColor: "#111",
-             percentage: true,
-             barHeight: 1,
-             minimumTime: 200,
-             fadeOutTime: 1000
-         });
-     });
-
-     var QueryLoader2 = require("queryloader2");
-
-     var loader = new QueryLoader2(document.querySelector("body"), {
-         barColor: "#efefef",
-         backgroundColor: "#111",
-         percentage: true,
-         barHeight: 1,
-         minimumTime: 200,
-         fadeOutTime: 1000
-     });
-
-     $(document).ready(function () {
-         $("body").queryLoader2();
-     });
-    </script>
+  
     
     
 </head>
 <body >
     
 
-
-<div id="queryloader2"></div> 
-
-
-
-
  
         <!-- header area start -->
-        <header>
+<header>
 
     <!-- header middle start -->
         <div id = "fb-root" > </div> 
@@ -125,7 +92,7 @@
 
                         <div class="col-lg-3">
                             <div class="brand-logo">
-                                <a href="../index.php">
+                                <a href="../">
                                     <img src="../Vista/img_dj/LOGO CON COLOR.png" alt="Logo Proedits">
                                     <!-- //============REDES SOCIALES SEGUIR===========// -->
                              <!--        <div class="row center-block">
@@ -166,7 +133,7 @@
                             <div id="countdown-2"></div> -->
  
 
-            <div class="row center-block">
+                    <div class="row center-block">
                                     <div class="col-12 center-block">
                                         <div id="fb-root"></div>
                                                 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v5.0"></script>
@@ -193,27 +160,47 @@
                                 
                                     <nav id="mobile-menu">
                                         <ul>  
-                                            <li class="active"><a href="../index.php"><i class="fa fa-home"></i>Inicio</a></li>
+                                            <li class="active"><a href="../"><i class="fa fa-home"></i>Inicio</a></li>
                                              <li class="static"><a href="../membresia.php">Membresias</a></li> 
 
-                                           
-                                            <li ><a href="../index.php">Editores/Remixer<i class="fa fa-angle-down"></i></a>
-                                                <ul class="dropdown">
-                                                    <li><a href="../index.php">Ver todos los Editores</a></li>
-                                                <?php 
-                                                
-                                                   $cont=1;
-                                                   $proveedor=CtrProveedor::ctr_listar_proveedor();
+                                             <li class="static"><a href="../">Editores/Remixer <i class="fa fa-angle-down"></i></a>
+                                                <ul class="megamenu dropdown">
 
-                                                   //print_r($proveedor);
-                                                   foreach($proveedor as $key=>$value){
+                                                <?php
+                                                $proveedor=CtrProveedor::ctr_listar_proveedor();
+                                                $numTotalProveedes=count($proveedor);
+                                                $numColumaImprimir=$numTotalProveedes/4;
+                                                // echo $numColumaImprimir;
+                                                //echo round($numColumaImprimir);
+                                                //echo $numTotalProveedes;
+                                                $contadorProveedor=0;
+                                                // echo (count($proveedor));
+                                                 for($i=0; $i <4; $i++){
+                                                        # code...
+                                                    echo  '<li class="mega-title"><a href="#"></a>
+                                                                <ul>';
+                                                            
+                                                            for ($j=0; $j <round($numColumaImprimir) ; $j++) { 
+                                                                //echo $contadorProveedor++;
+                                                                if($contadorProveedor<$numTotalProveedes){
+                                                                echo '<li><a href="'.(ControladorPlantilla::url_dj_productos()).$proveedor[$contadorProveedor]['id'].'&dj='.$proveedor[$contadorProveedor]['apodo'].'"> '.$proveedor[$contadorProveedor]['apodo'].'</a></li>';
+                                                                }
+                                                                $contadorProveedor++;
+                                                                # code...
+                                                               //echo'<li><a href="'.(ControladorPlantilla::url_dj_productos()).$value['id'].'&dj='.$value['apodo'].'"> '.$value['apodo'].'</a></li>';
+                                                            }
+                                                        
 
-                                                    echo'<li><a href="'.(ControladorPlantilla::url_dj_productos()).$value['id'].'"> '.$value['apodo'].'</a></li>';
-                                                   }
+                                                    echo    '      </ul>
+                                                            </li>';
+
+                                                    }
+  
                                                 ?>
+                                                  
                                                 </ul>
                                             </li>
-
+                                          
 
                                             <!-- <li><a href="../updates.php">Updates</a></li> -->
                                             <li>

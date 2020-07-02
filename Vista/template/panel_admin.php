@@ -71,7 +71,8 @@
                                                         <!-- //=============Membresia=============================// -->
                                                         <div class="col-lg-6 pull-right ">
                                                             <h2 class="sqr-btn d-block">Membresia Adquiridas</h2>
-                                                                <div class="membresia" style="background-color: #e1e1e1;">
+                                                                <div class="membresia" >
+                                                          
                                                                     <?php
                                                                         $listar_membresia=CtrMembresia::ctr_listar_membresia();
                                                                         $tipo_membresia="";
@@ -98,16 +99,20 @@
                                                                                             $tipo_membresia="Ultimate";
                                                                                         
                                                                                         break;
-                                                                                }   
-                                                                                echo '<br><label style="color: red">Tipo Membresia : </label>'.$tipo_membresia;
-                                                                                echo '<br><label style="color: red">Fecha Adquisicion de la membresia : </label>'.$value['fecha_inicio'];
-                                                                                echo '<br><label style="color: red">Fecha Culmininacion Membresia: </label>'.$value['fecha_culminacion'];
-                                                                                echo '<br><label style="color: red">Descargas Disponibles : </label>'.$value['rango'];
-                                                                                echo"<br>";
+                                                                                }
+                                                                                    echo'<div class="alert alert-success" role="alert">';   
+                                                                                        echo '<br><label style="color: red">Tipo Membresia : </label>'.$tipo_membresia;
+                                                                                        echo '<br><label style="color: red">Fecha Adquisicion de la membresia : </label>'.$value['fecha_inicio'];
+                                                                                        echo '<br><label style="color: red">Fecha Culmininacion Membresia: </label>'.$value['fecha_culminacion'];
+                                                                                        echo '<br><label style="color: red">Descargas Disponibles : </label>'.$value['rango'];
+                                                                                    echo"</div>";
+                                                                                    echo"<br>";
+                                                                                    
                                                                             }
                                                                         }
 
                                                                     ?>
+                                                                       
                                                                 </div>        
 
                                                         </div>

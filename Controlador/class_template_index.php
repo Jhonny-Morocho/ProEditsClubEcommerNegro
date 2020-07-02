@@ -35,7 +35,7 @@ class ControladorPlantilla{
 
         public function reproductor(){
            
-            require"Vista/template/reproductor.php";
+            require"jPlayer Flat Audio Theme/reproductor.php";
         }
 
         

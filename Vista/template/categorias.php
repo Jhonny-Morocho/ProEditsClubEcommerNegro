@@ -30,7 +30,7 @@ require'Modelo/class_mdl_biblioteca.php';
                                     $biblioteca=CtrBiblioteca::ctr_listar_biblioteca();
                                     foreach($biblioteca as $key=>$value){
                                         echo'<li>
-                                                <a href="'.(ControladorPlantilla::url_biblioteca_productos()).$value['id'].'">
+                                                <a href="'.(ControladorPlantilla::url_biblioteca_productos()).$value['id'].'&genero='.$value['genero'].'">
                                                     <i class="fa fa-music" aria-hidden="true"></i> '.$value['genero'].'
                                                 </a>
                                             </li>';

@@ -19,6 +19,9 @@ include'Controlador/class_ctr_producto.php';
 include'Controlador/class_ctr_cliente_producto.php';
 include'Controlador/class_ctr_biblioteca.php';
 
+//paginacion
+require'Modelo/class_mdl_Paginacion.php';
+include'Controlador/class_ctr_paginacion.php';
 
 
 //=============================creacion de objetos==========================

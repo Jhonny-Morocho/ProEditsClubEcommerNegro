@@ -61,13 +61,10 @@
 
 
     <!-- //========================Reproductor========================================// -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
-
+    <link rel="stylesheet" type="text/css" href="../jPlayer Flat Audio Theme/css/jplayer-flat-audio-theme.css" />
+    <script type="text/javascript" src="../jPlayer Flat Audio Theme/js/jquery.jplayer.min.js"></script> 
     <script src="../Controlador/js/reproducir_play.js"></script>
-   <link rel="stylesheet" href="../ReproducotrMinimal/src/jQuery.AudioPlayer.css">
-<script type="text/javascript" src="../ReproducotrMinimal/src/jQuery.AudioPlayer.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 

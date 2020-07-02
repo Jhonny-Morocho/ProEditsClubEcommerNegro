@@ -8,11 +8,11 @@
 
         public function __construct(){
 
-            @$modo_developer=false;//aqui cambio el modo
+            @$modo_developer=true;//aqui cambio el modo
 
             if($modo_developer){
                 try{
-                    $this->link = new PDO("mysql:host=localhost;dbname=pro_edit_servidor",
+                    $this->link = new PDO("mysql:host=localhost;dbname=pro_edit",
                     "root",
                     "root",
                     array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,

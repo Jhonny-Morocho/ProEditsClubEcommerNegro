@@ -32,22 +32,22 @@
 
 <!-- partial:index.partial.html -->
 <!-- Contenedor -->
-<div class="pricing-wrapper clearfix" style="padding-bottom: 50px;">
+<!-- <div class="pricing-wrapper clearfix" style="padding-bottom: 50px;">
 	<div class="row">
 		<div class="col-lg-12">
 			<img src="img_dj/construccion.jpg">
 		</div>
 	</div>
-</div>
+</div> -->
 
 
-<!-- 	<div class="pricing-wrapper clearfix" style="padding-bottom: 50px;">
+	<div class="pricing-wrapper clearfix" style="padding-bottom: 50px;">
 		<div class="pricing-table">
 			<h3 class="pricing-title">Basico</h3>
 			<div class="price">$12.99<sup>/ mes</sup></div>
 		
 			<ul class="table-list">
-				<li>20  <span> Descargas</span></li>
+				<li>15  <span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 	
@@ -62,7 +62,7 @@
 			<div class="price">$25<sup>/ mes</sup></div>
 			
 			<ul class="table-list">
-				<li>40 <span> Descargas</span></li>
+				<li>30 <span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 		
@@ -77,7 +77,7 @@
 			<div class="price">$18<sup>/ mes</sup></div>
 	
 			<ul class="table-list">
-				<li>30<span> Descargas</span></li>
+				<li>20<span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 		
@@ -88,7 +88,7 @@
 		</div>
 		
 	
-	</div> -->
+	</div> 
 <!-- partial -->
 
 

@@ -34,3 +34,38 @@ Stack trace:
 #2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
 #3 {main}
   thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40
+[29-May-2020 11:52:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php:40
+Stack trace:
+#0 /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_Oferta.php(9): Conexion->__construct()
+#1 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(8): Modelo_Oferta::sql_lisartar_Oferta()
+#2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
+#3 {main}
+  thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40
+[30-May-2020 23:49:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php:40
+Stack trace:
+#0 /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_Oferta.php(9): Conexion->__construct()
+#1 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(8): Modelo_Oferta::sql_lisartar_Oferta()
+#2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
+#3 {main}
+  thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40
+[06-Jun-2020 13:46:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php:40
+Stack trace:
+#0 /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_Oferta.php(9): Conexion->__construct()
+#1 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(8): Modelo_Oferta::sql_lisartar_Oferta()
+#2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
+#3 {main}
+  thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40
+[06-Jun-2020 13:46:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php:40
+Stack trace:
+#0 /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_Oferta.php(9): Conexion->__construct()
+#1 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(8): Modelo_Oferta::sql_lisartar_Oferta()
+#2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
+#3 {main}
+  thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40
+[30-Jun-2020 04:33:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php:40
+Stack trace:
+#0 /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_Oferta.php(9): Conexion->__construct()
+#1 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(8): Modelo_Oferta::sql_lisartar_Oferta()
+#2 /home/ky4lkexwbsc8/public_html/Controlador/class_ctr_Oferta.php(36): Ctr_Oferta::ctr_listar_Oferta()
+#3 {main}
+  thrown in /home/ky4lkexwbsc8/public_html/Modelo/class_mdl_bd_conexion.php on line 40

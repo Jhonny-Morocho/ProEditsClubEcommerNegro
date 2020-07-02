@@ -16,7 +16,7 @@
             switch (@$tipo_membresia) {
 
                 case 'Nombre Cancion: Basico':
-                $rango=20;
+                $rango=15;
 
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
 
@@ -24,14 +24,14 @@
                     break;
 
                 case 'Nombre Cancion: Premium':
-                $rango=40;
+                $rango=30;
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
                     return $respuesta;
                     break;
 
 
                 case 'Nombre Cancion: Ultimate':
-                $rango=30;
+                $rango=20;
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
                     return $respuesta;
                     break;
@@ -56,8 +56,6 @@
             $listar_membresia=Modelo_Membresia::sql_listar_membresia($tabla);
 
 
-   
-
             $tipo_membresia="";
             $estado_caducado=false;
             //$fecha_actual = date('Y-m-j');//fecha de hoy
@@ -78,10 +76,11 @@
             //que no puede comprar una nueva membresia hasta q se acabe la actuakl                                            
              foreach($listar_membresia as $key=>$value){
 
-                 
-                 if($id_cliente==$value['id_cliente'] && $value['fecha_inicio']<=$value['fecha_culminacion'] ){
-                     //
-                   
+                //comente el if por q los clientes pueden compar membesias sin limite de tiemp
+                //if($id_cliente==$value['id_cliente'] && $value['fecha_inicio']<=$value['fecha_culminacion'] ){
+                 if($id_cliente==$value['id_cliente'] and $value['rango']>0){//termina la membrisia actual y pude comprar mas
+                     //el cliente debe acabar la membrsia actual para seguir con la siguiente 
+                
                     $estado_membresia="true";//ahun esta activa la membresia
                     $tipo_membresia=$value['tipo'];
                     $fecha_culminacion=$value['fecha_culminacion'];
