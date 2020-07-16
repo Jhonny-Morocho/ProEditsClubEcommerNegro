@@ -1,11 +1,11 @@
 <?php
 ini_set('display_errors', 'On');
 
-require'../Modelo/class_mdl_bd_conexion.php';
+//require'../Modelo/class_mdl_bd_conexion.php';
 
-require'../Modelo/class_mdl_membresia.php';
+//require'../Modelo/class_mdl_membresia.php';
 
-include'../Controlador/class_ctr_membresia.php';
+//include'../Controlador/class_ctr_membresia.php';
 
 session_start();
 
@@ -17,8 +17,7 @@ if(isset($_SESSION['usuario']) and $_SESSION['tipo_usuario']=='Cliente' and isse
 
     //el cliente puede compar las membresias q el quiera sin limite  aqui dejo comprar la membresia sin limite de tiempo
 
-    $respuesta=array("respuesta"=>'false',
-    );
+    $respuesta=array("respuesta"=>'false');
 
     //teneimoas un control para q el cliente olo pueda comprar una membresia por mes pero le comennbte
     

@@ -9,14 +9,14 @@
 
         //* listar todos los clientes
         public static function ctr_agregar_membresia($tipo_membresia,$id_cliente,$precio,$tipo_pago){//listar cliente
-            $tabla="membresia";
-
-
+            $tabla="membresia_cliente";
+            $membresias=ModeloMembresia::sqlListarMembresias();
+    
             //defino tipo de rango de descarga
             switch (@$tipo_membresia) {
 
                 case 'Nombre Cancion: Basico':
-                $rango=15;
+                $rango=$membresias[0]['numDescargas'];
 
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
 
@@ -24,14 +24,16 @@
                     break;
 
                 case 'Nombre Cancion: Premium':
-                $rango=30;
+                
+                $rango=$membresias[1]['numDescargas'];
+               
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
                     return $respuesta;
                     break;
 
 
                 case 'Nombre Cancion: Ultimate':
-                $rango=20;
+                $rango=$membresias[2]['numDescargas'];
                 $respuesta=Modelo_Membresia::sql_agregar_membresia($tabla,$tipo_membresia,$rango,$id_cliente,$precio,$tipo_pago);// el controlador le pide al modelo una respuesta
                     return $respuesta;
                     break;
@@ -42,7 +44,7 @@
         }
 
         public static function ctr_listar_membresia(){//listar cliente
-            $tabla="membresia";
+            $tabla="membresia_cliente";
 
             $respuesta=Modelo_Membresia::sql_listar_membresia($tabla);
             return $respuesta;
@@ -50,7 +52,7 @@
         }
 
         public static function ctr_controlar_compra_membresia($id_cliente){// compruevo si la membresia a caducado q el cliente no tenga membresia para comprar una nueva
-            $tabla="membresia";
+            $tabla="membresia_cliente";
 
            
             $listar_membresia=Modelo_Membresia::sql_listar_membresia($tabla);
@@ -109,7 +111,7 @@
         }
 
         public static function ctr_actualizar_membresia($id_membresia,$actualizar_descargas){//listar cliente
-            $tabla="membresia";
+            $tabla="membresia_cliente";
 
            
 

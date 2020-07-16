@@ -3,7 +3,7 @@
     <?php
         ini_set('display_errors', 'On');
 
-        var_dump($_GET);
+        //var_dump($_GET);
         $resultado=$_GET['exito'];
 
         session_start();
@@ -34,7 +34,7 @@
             $total_cancelar=$_GET['total_cancelar'];
 
             $respuesta_factura=CtrCliente_Producto::ctr_crear_factura($id_Cliente,$total_cancelar);
-            print_r($respuesta_factura['id_factura']);//regrsa el bojeto una respuesta
+            //print_r($respuesta_factura['id_factura']);//regrsa el bojeto una respuesta
             $id_factura=$respuesta_factura['id_factura'];
 
 
@@ -46,7 +46,7 @@
             echo "total debitado es :".$total_actulizar;*/
 
             $respuesta_saldo_actualizado=CtrCliente::ctr_editar_cliente_saldo($id_Cliente,$total_actulizar);
-            print_r($respuesta_saldo_actualizado);
+            //print_r($respuesta_saldo_actualizado);
 
             //================================Ingresar Cliente Producto================
             //================================Ingresar Cliente Producto================
@@ -66,17 +66,21 @@
 
 
                 $contador++;
-                print_r($respuesta_cliente_producto);
+                //print_r($respuesta_cliente_producto);
             }//fin del while
-                    echo"se ingreso todo correctamente";
-                       //============BORRO LA CESTA=================//
+                    //echo"se ingreso todo correctamente";
+                    //============BORRO LA CESTA=================//
+    
+                    echo '<script src="../Controlador/js/carrito_compras.js"></script>';
                     echo '<script>
-                            localStorage.removeItem("listaProductos");
-                            localStorage.removeItem("cantidadCesta");
+                        localStorage.removeItem("listaProductos");
+                        localStorage.removeItem("cantidadCesta");
+                        localStorage.clear();
                     </script>';
-
-                            header("Location:../admin_cliente.php");// direcciono al lugar donde estan los productos
-                           /* die(json_encode($respuesta));*/
+                    //print_r($result->payer->payer_info->email);
+                    echo '<script>
+                                window.location = "../admin_cliente.php";
+                            </script>';
 
 
         }else{

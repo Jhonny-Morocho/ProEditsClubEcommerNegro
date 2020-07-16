@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 require'../../Modelo/class_mdl_bd_conexion.php';//base de datos
 
 
-require'../../Modelo/class_mdl_membresia.php';
+require'../../Modelo/class_mdl_cliente_membresia.php';
 include'../../Controlador/class_ctr_membresia.php';
 
 // require'../../Modelo/class_mdl_cliente_producto.php';

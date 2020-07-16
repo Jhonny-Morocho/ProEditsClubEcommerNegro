@@ -13,12 +13,14 @@ $(".pricing-action").on('click',function(e){
 	console.log("soy membresia");
 	var precio=$(this).attr("data-precio");
 	var tipo=$(this).attr("data-tipo");
+	var numDescargas=$(this).attr("data-numDescargas");
 
     //window.location.href = url_transaccion_membresia;
 	console.log("precio",precio);
 	console.log("tipo",tipo);
+	console.log("numDescargar",numDescargas);
 	//envio de esta forma con la finalidad de q se adapte a la otra configurion
-	membresia = {'id_cancion':'1','nombre_cancion':tipo, 'precio_cancion':precio,'total_cancelar':precio,'value_radio':'paypal'};
+	membresia = {'id_cancion':'1','nombre_cancion':tipo,'numDescargas':numDescargas, 'precio_cancion':precio,'total_cancelar':precio,'value_radio':'paypal'};
 
 	//1. Pregunta si la membresia q hizo clik es la q el desea
 	Swal.fire({

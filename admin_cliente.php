@@ -9,14 +9,15 @@ require'Modelo/class_mdl_proveedor.php';
 require'Modelo/class_mdl_cliente.php';// para ver las facturas
 require'Modelo/class_mdl_cliente_producto.php';
 require'Modelo/class_mdl_membresia.php';
-
+include'Modelo/class_mdl_cliente_membresia.php';
 
 include'Controlador/class_ctr_update.php';
 include'Controlador/class_ctr_proveedor.php';
 include'Controlador/class_ctr_cliente_producto.php';
 include'Controlador/class_ctr_biblioteca.php';
 include'Controlador/class_ctr_cliente.php';// para ver las facturas
-include'Controlador/class_ctr_membresia.php';
+include'Controlador/class_ctr_membresia.php';// para ver las facturas
+
 
 
 require_once 'Controlador/class_template_index.php';

@@ -75,8 +75,11 @@
                                                           
                                                                     <?php
                                                                         $listar_membresia=CtrMembresia::ctr_listar_membresia();
+
+                                                                        //print_r($listar_membresia);
+                                                                        //print_r($_SESSION);
                                                                         $tipo_membresia="";
-                                                    
+                                                                        $cont=1;
                                                                         foreach($listar_membresia as $key=>$value){
                                                                         
                                                                             if(@$_SESSION['id_cliente']==$value['id_cliente']){
@@ -101,7 +104,7 @@
                                                                                         break;
                                                                                 }
                                                                                     echo'<div class="alert alert-success" role="alert">';   
-                                                                                        echo '<br><label style="color: red">Tipo Membresia : </label>'.$tipo_membresia;
+                                                                                        echo '<br><label style="color: red">'.($cont++).'.) Tipo Membresia : </label>'.$tipo_membresia;
                                                                                         echo '<br><label style="color: red">Fecha Adquisicion de la membresia : </label>'.$value['fecha_inicio'];
                                                                                         echo '<br><label style="color: red">Fecha Culmininacion Membresia: </label>'.$value['fecha_culminacion'];
                                                                                         echo '<br><label style="color: red">Descargas Disponibles : </label>'.$value['rango'];
@@ -128,49 +131,7 @@
                                 </div>
                                 <!-- Single Tab Content End -->
 
-                                <!-- Single Tab Content Start -->
-                                <div class="tab-pane fade" id="orders" role="tabpanel">
-                                    <div class="myaccount-content">
-                                        <h3>Gestionar Editores</h3>
-                                        <div class="myaccount-table table-responsive text-center">
-                                            <table class="table table-bordered">
-                                                <thead class="thead-light">
-                                                    <tr>
-                                                        <th>Ordzzesr</th>
-                                                        <th>Date</th>
-                                                        <th>Status</th>
-                                                        <th>Total</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Aug 22, 2018</td>
-                                                        <td>Pending</td>
-                                                        <td>$3000</td>
-                                                        <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>July 22, 2018</td>
-                                                        <td>Approved</td>
-                                                        <td>$200</td>
-                                                        <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>June 12, 2017</td>
-                                                        <td>On Hold</td>
-                                                        <td>$990</td>
-                                                        <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Tab Content End -->
+                            
 
                                 <?php
 
@@ -202,28 +163,7 @@
                                 $plantilla->ctr_tabla_descargar_productos_cliente();
                                 ?>
 
-                                <!-- Single Tab Content Start -->
-                                <div class="tab-pane fade" id="payment-method" role="tabpanel">
-                                    <div class="myaccount-content">
-                                        <h3>Payment Method</h3>
-                                        <p class="saved-message">You Can't Saved Your Payment Method yet.</p>
-                                    </div>
-                                </div>
-                                <!-- Single Tab Content End -->
-
-                                <!-- Single Tab Content Start -->
-                                <div class="tab-pane fade" id="address-edit" role="tabpanel">
-                                    <div class="myaccount-content">
-                                        <h3>Billing Address</h3>
-                                        <address>
-                                            <p><strong>Alex Tuntuni</strong></p>
-                                            <p>1355 Market St, Suite 900 <br>
-                                                San Francisco, CA 94103</p>
-                                            <p>Mobile: (123) 456-7890</p>
-                                        </address>
-                                        <a href="#" class="check-btn sqr-btn "><i class="fa fa-edit"></i> Edit Address</a>
-                                    </div>
-                                </div>
+                   
                                 <!-- Single Tab Content End -->
 
                                 <!-- Single Tab Content Start Detalle de mi cuenta -->
@@ -250,7 +190,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="single-input-item">
                                                                 <p class="p_correo"></p>
-                                                            <input type="email" placeholder="Correro" required="" name="correo" id="id_correo" value="<?php echo $correo?>">
+                                                            <input type="email" placeholder="Correro" required="" name="correo" id="id_correo" value="<?php echo $correo?>" >
                                                         </div>
                                                     </div>
                                                 </div>

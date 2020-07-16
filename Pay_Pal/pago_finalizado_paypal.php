@@ -97,6 +97,7 @@
               /*die('TODO BIEN');*/
               require'../Modelo/class_mdl_bd_conexion.php';
               require'../Modelo/class_mdl_cliente_producto.php';
+              require'../Modelo/class_mdl_cliente_membresia.php';
               require'../Modelo/class_mdl_membresia.php';
 
               include'../Controlador/class_ctr_cliente_producto.php';
@@ -109,8 +110,9 @@
                   case true:
                       echo "compro_membresia";
                       $metodo="PayPal";
+                      //
                       $respuesta_membresia=CtrMembresia::ctr_agregar_membresia($tipo_membresia,$id_Cliente,$total_cancelar,$metodo);
-                      print_r($respuesta_membresia);
+                      //print_r($respuesta_membresia);
                   
                       header("Location:../admin_cliente.php");//
                       break;
@@ -138,18 +140,23 @@
                       );//guardo productos del cliente q compro
 
                       $contador++;
-                      print_r($respuesta_cliente_producto);
+                      //print_r($respuesta_cliente_producto);
 
                   }//fin del while
                           echo"exito ";
                              //============BORRO LA CESTA=================//
                     
-                    echo '<script>
+                        echo '<script src="../Controlador/js/carrito_compras.js"></script>';
+                        echo '<script>
                             localStorage.removeItem("listaProductos");
                             localStorage.removeItem("cantidadCesta");
-                          </script>';
+                            localStorage.clear();
+                        </script>';
                           //print_r($result->payer->payer_info->email);
-                          header("Location:../admin_cliente.php");//
+                          echo '<script>
+                                    window.location = "../admin_cliente.php";
+                                </script>';
+                          //header("Location:../admin_cliente.php");//
 
                       break;
 

@@ -7,7 +7,8 @@
     require'Modelo/class_mdl_bd_conexion.php';
     require'Modelo/class_mdl_proveedor.php';
     require'Modelo/class_mdl_cliente_producto.php';
-    require'Modelo/class_mdl_producto.php';
+	require'Modelo/class_mdl_producto.php';
+	require'Modelo/class_mdl_membresia.php';
 
 
 	include'Controlador/class_ctr_update.php';
@@ -23,6 +24,11 @@
     require_once 'Controlador/class_template_index.php';
     $plantilla= new ControladorPlantilla();
 	$plantilla->ctr_header();
+
+	// ====================Listar Membresias disponibles=================
+	// ====================Listar Membresias disponibles=================
+	$membresias=ModeloMembresia::sqlListarMembresias();
+
 
 ?>
 
@@ -43,47 +49,53 @@
 
 	<div class="pricing-wrapper clearfix" style="padding-bottom: 50px;">
 		<div class="pricing-table">
-			<h3 class="pricing-title">Basico</h3>
-			<div class="price">$12.99<sup>/ mes</sup></div>
+			<h3 class="pricing-title"><?php echo $membresias[0]['nombreMembresia']?></h3>
+			<div class="price">$<?php echo $membresias[0]['precio']?><sup>/ mes</sup></div>
 		
 			<ul class="table-list">
-				<li>15  <span> Descargas</span></li>
+				<li><?php echo $membresias[0]['numDescargas']?> <span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 	
 			<div class="table-buy">
-				<p>$12.99<sup>/ mes</sup></p>
-				<a href="#" class="pricing-action" data-precio="12.99" data-tipo="Basico">Comprar</a>
+				<p>$<?php echo $membresias[0]['precio']?><sup>/ mes</sup></p>
+				<a href="#" class="pricing-action" data-precio="<?php echo $membresias[0]['precio']?>" 
+													data-numDescargas="<?php echo $membresias[0]['numDescargas']?>"
+												 data-tipo="<?php echo $membresias[0]['nombreMembresia']?>">Comprar</a>
 			</div>
 		</div>
 
 		<div class="pricing-table recommended">
-			<h3 class="pricing-title">Premium</h3>
-			<div class="price">$25<sup>/ mes</sup></div>
+			<h3 class="pricing-title"><?php echo $membresias[1]['nombreMembresia']?></h3>
+			<div class="price">$<?php echo $membresias[1]['precio']?><sup>/ mes</sup></div>
 			
 			<ul class="table-list">
-				<li>30 <span> Descargas</span></li>
+				<li><?php echo $membresias[1]['numDescargas']?> <span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 		
 			<div class="table-buy">
-				<p>$25<sup>/ mes</sup></p>
-				<a href="#" class="pricing-action" data-precio="25" data-tipo="Premium">Comprar</a>
+				<p>$<?php echo $membresias[1]['precio']?><sup>/ mes</sup></p>
+				<a href="#" class="pricing-action" data-precio="<?php echo $membresias[1]['precio']?>" 
+													data-numDescargas="<?php echo $membresias[1]['numDescargas']?>"
+													data-tipo="<?php echo $membresias[1]['nombreMembresia']?>">Comprar</a>
 			</div>
 		</div>
 
 		<div class="pricing-table">
-			<h3 class="pricing-title">Ultimate</h3>
-			<div class="price">$18<sup>/ mes</sup></div>
+			<h3 class="pricing-title"><?php echo $membresias[2]['nombreMembresia']?></h3>
+			<div class="price">$<?php echo $membresias[2]['precio']?><sup>/ mes</sup></div>
 	
 			<ul class="table-list">
-				<li>20<span> Descargas</span></li>
+				<li><?php echo $membresias[2]['numDescargas']?> <span> Descargas</span></li>
 				<li>30 <span> Dias</span></li>
 			</ul>
 		
 			<div class="table-buy">
-				<p>$18<sup>/ mes</sup></p>
-				<a href="#" class="pricing-action" data-precio="18" data-tipo="Ultimate">Comprar</a>
+				<p>$<?php echo $membresias[2]['precio']?><sup>/ mes</sup></p>
+				<a href="#" class="pricing-action" data-precio="<?php echo $membresias[2]['precio']?>" 
+													data-numDescargas="<?php echo $membresias[2]['numDescargas']?>"
+													data-tipo="<?php echo $membresias[2]['nombreMembresia']?>">Comprar</a>
 			</div>
 		</div>
 		

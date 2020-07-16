@@ -122,7 +122,7 @@ $.ajax({
 					cache:false,
 					contentType:false,
 					processData:false,
-					dataType:data_type,//json
+					dataType:data_type,//json//data_type
 					success:function(respuesta){
 
 						console.log("respuesta",respuesta);

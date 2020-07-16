@@ -249,7 +249,7 @@
 		
 		if(isset($_POST["id_cancion"])){//si es un post
 			include'../Modelo/class_mdl_bd_conexion.php';
-			include'../Modelo/class_mdl_membresia.php';
+			include'../Modelo/class_mdl_cliente_membresia.php';
 			require'../Controlador/class_ctr_membresia.php';
 			
 			//1. preguntar si la membria ahun no ha caducado
@@ -273,7 +273,7 @@
 					"nombre"=>$nombre_cancion,
 					"precio"=>$precio_cancion
 			);
-
+			//print_r($precio_cancion);
 			$titulo_final=explode(",", $datos["nombre"]);
 			$id_final=str_replace(",","-", $datos["id"]);
 			$precio_final=explode(",", $datos["precio"]);//para separar remplazo la comas por guione y hago una cadena
