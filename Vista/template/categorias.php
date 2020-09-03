@@ -25,7 +25,7 @@ require'Modelo/class_mdl_biblioteca.php';
                             </div>
                             <nav class="category-menu static hm-1">
                                 <ul>
-                                    <li><a href="../index.php"><i class="fa fa-music" aria-hidden="true"></i>Todos los generos</a></li>
+                                    <li><a href="../"><i class="fa fa-music" aria-hidden="true"></i>Todos los generos</a></li>
                                 <?php 
                                     $biblioteca=CtrBiblioteca::ctr_listar_biblioteca();
                                     foreach($biblioteca as $key=>$value){

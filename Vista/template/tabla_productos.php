@@ -71,7 +71,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-10">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="busqueda" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="buscar...">
+                                                                    <?php if(@$_GET['busqueda']) {?>
+                                                                            <input type="text" name="busqueda" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="buscar..." value="<?php echo $_GET['busqueda']  ?>">
+                                                                        <?php }else{ ?>
+                                                                            <input type="text" name="busqueda" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="buscar..." maxlength="100">
+                                                                        <?php }?>
+                                                                       
                                                                         
                                                                     </div>
                                                                 </div>

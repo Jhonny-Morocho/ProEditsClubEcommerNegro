@@ -34,6 +34,8 @@
     </div> 
 
 </div>
+
+
 <style>
 .jp-audio .jp-controls{
     background-color: #FD0002 !important;
@@ -59,3 +61,4 @@
 }
 
 </style>
+

@@ -57,12 +57,12 @@ $('.reproducir_play').on('click',function(e){
 
     e.preventDefault();
 
-
+    
     //$(".cargandoCancion").remove();
     var url_destino=$(this).attr('url_destino');
     var titulo=$(this).attr('nombre_cancion');
     console.log("ddd");
-    //animacion();
+ 
 
     //$(this).append('<div class="cargandoCancion"></div>');
    
@@ -78,34 +78,13 @@ $('.reproducir_play').on('click',function(e){
         success:function(data){
             console.log(data);
             animacion();
-            
             //reproductor
-            jQuery("#jquery_jplayer_1").jPlayer({
-                swfPath: "http://www.jplayer.org/latest/js/Jplayer.swf",
-                supplied: "mp3",
-                wmode: "window",
-                preload:"auto",
-                autoPlay: true,
-                errorAlerts:false,
-                warningAlerts:false
-              });
-      
-
-
-
-           
-            jQuery("#jquery_jplayer_1").jPlayer("setMedia", {
-                mp3:url_destino
-              });
-        
-            jQuery("#jquery_jplayer_1").jPlayer("play");
-            
+            wavesurfer.load(url_destino);
+              
+            wavesurfer.on('ready', function () {
+                wavesurfer.play();
+            });
         }
     });
- 
-   
-    
 });
-
-
 

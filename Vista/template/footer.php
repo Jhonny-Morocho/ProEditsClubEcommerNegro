@@ -102,9 +102,8 @@
 <!-- <script src="../Admin/assets/js/pages/tables/jquery-datatable.js"></script> -->
 
     <!-- //========================Reproductor========================================// -->
-
-    <script src="../Controlador/js/reproducir_play.js?v=2"></script>
-
+ 
+    <script src="../Controlador/js/reproductorWave.js"></script>
 
         <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -154,16 +153,6 @@
 
         gtag('config', 'UA-136516597-1');
   </script>
-
-
-
-<!-- =============================REPRODUCTOR DE AUDIO=============================== -->
-<link rel="stylesheet" type="text/css" href="../jPlayer Flat Audio Theme/css/jplayer-flat-audio-theme.css" />
-<script type="text/javascript" src="../jPlayer Flat Audio Theme/js/jquery.jplayer.min.js"></script> 
-
-
-
-
 
 
 

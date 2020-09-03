@@ -31,7 +31,7 @@
 
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img_dj/LOGO CON COLOR.png?v=1" type="image/x-icon" />
+    <link rel="shortcut icon" href="img_dj/iconoProedit.png?v=1" type="image/x-icon" />
     <!-- <link rel="image_src" href="img_dj/Palntilla-color-azul-yo-me-quedo-en-casa.png"> -->
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"> 
